@@ -23,8 +23,8 @@ const App = (props) => {
         <Route path="/music" render={() => <Music />} />
         <Route path="/settings" render={() => <Settings />} />
         <Route
-          path="/friends"
-          render={() => <FriendsSection state={props.state.friendsSection} />}
+          path="/users"
+          render={() => <FriendsSection store={props.store.friendsSection} />}
         />
       </div>
     </div>
