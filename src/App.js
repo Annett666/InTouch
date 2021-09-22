@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import FriendsSection from "./components/FriendsSection/FriendsSection";
+import UsersContainer from "./components/Users/UsersContainer";
 import DialogsContainer from "./components/Dialods/DialogsContainer";
 
 // стрелочная функция
@@ -22,10 +22,7 @@ const App = (props) => {
         <Route path="/news" render={() => <News />} />
         <Route path="/music" render={() => <Music />} />
         <Route path="/settings" render={() => <Settings />} />
-        <Route
-          path="/users"
-          render={() => <FriendsSection store={props.store.friendsSection} />}
-        />
+        <Route path="/users" render={() => <UsersContainer />} />
       </div>
     </div>
   );

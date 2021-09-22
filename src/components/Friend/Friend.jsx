@@ -1,5 +1,5 @@
 import k from "./Friend.module.css";
-import friend from "../../../images/friend.jpg";
+import friend from "../../images/friend.jpg";
 
 const Friend = (props) => {
   return (

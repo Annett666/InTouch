@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import s from "./Navbar.module.css";
-import FriendsSection from "../FriendsSection/FriendsSection";
 
 const Navbar = (props) => {
   return (
@@ -34,9 +33,6 @@ const Navbar = (props) => {
         <NavLink to="/users" activeClassName={s.activeLink}>
           Users
         </NavLink>
-        {/* <div>
-          <FriendsSection friends={props.state.friends} />
-        </div> */}
       </div>
     </nav>
   );
