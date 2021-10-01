@@ -1,4 +1,4 @@
-import img from "../images/post.jpg";
+import img from "../assets/images/post.jpg";
 
 const SEND_MESSAGE = "SEND_MESSAGE";
 const UPDATE_NEW_MESSAGE_TEXT = "UPDATE_NEW_MESSAGE_TEXT";

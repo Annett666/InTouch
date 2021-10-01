@@ -1,5 +1,5 @@
 import s from "./ProfileInfo.module.css";
-import main from "../../../images/main.jpg";
+import main from "../../../assets/images/main.jpg";
 
 const ProfileInfo = () => {
   return (

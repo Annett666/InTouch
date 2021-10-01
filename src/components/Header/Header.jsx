@@ -1,5 +1,5 @@
 import l from "./Header.module.css";
-import logo from "../../images/InTouchLogo.png";
+import logo from "../../assets/images/InTouchLogo.png";
 
 const Header = () => {
   return (

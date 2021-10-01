@@ -1,5 +1,5 @@
 import k from "./Post.module.css";
-import photo_user from "../../../../images/post.jpg";
+import photo_user from "../../../../assets/images/post.jpg";
 
 const Post = (props) => {
   return (

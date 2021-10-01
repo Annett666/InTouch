@@ -1,4 +1,4 @@
-import img from "../images/post.jpg";
+import img from "../assets/images/post.jpg";
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
 import friendsReducer from "./friendsReducer";
