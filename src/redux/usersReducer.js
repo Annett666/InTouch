@@ -3,9 +3,14 @@ import { traverseTwoPhase } from "react-dom/test-utils";
 const SET_USERS = "SET_USERS";
 const FOLLOW_USER = "FOLLOW_USER";
 const UNFOLLOW_USER = "UNFOLLOW_USER";
+const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+const SET_TOTAL_USERS_COUNT = "SET_TOTAL_USERS_COUNT";
 
 let initialState = {
   users: [],
+  pageSize: 10,
+  totalUsersCount: 0,
+  currentPage: 1,
 };
 
 export const usersReducer = (state = initialState, action) => {
@@ -13,7 +18,7 @@ export const usersReducer = (state = initialState, action) => {
     case SET_USERS:
       return {
         ...state,
-        users: [...state.users, ...action.users],
+        users: action.users,
       };
     case FOLLOW_USER:
       return {
@@ -35,6 +40,16 @@ export const usersReducer = (state = initialState, action) => {
           return user;
         }),
       };
+    case SET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.currentPage,
+      };
+    case SET_TOTAL_USERS_COUNT:
+      return {
+        ...state,
+        totalUsersCount: action.totalUsersCount,
+      };
     default:
       return state;
   }
@@ -53,6 +68,16 @@ export const followUserActionCreator = (userId) => ({
 export const unfollowUserActionCreator = (userId) => ({
   type: UNFOLLOW_USER,
   userId,
+});
+
+export const setCurrentPageActionCreator = (currentPage) => ({
+  type: SET_CURRENT_PAGE,
+  currentPage,
+});
+
+export const setTotalUsersCountActionCreator = (totalUsersCount) => ({
+  type: SET_TOTAL_USERS_COUNT,
+  totalUsersCount,
 });
 
 export default usersReducer;
