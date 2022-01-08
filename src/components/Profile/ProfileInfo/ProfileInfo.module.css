@@ -1,8 +1,15 @@
 .descriptionBlock {
   padding: 10px;
+  display: flex;
+  column-gap: 20px;
 }
 
 .profileImage {
   width: 991px;
   height: 330px;
+}
+
+.contactsBlock {
+  display: flex;
+  flex-direction: column;
 }

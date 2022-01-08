@@ -8,3 +8,11 @@
   background-color: #96c9d9;
   margin-left: 0.5px;
 }
+
+.loginBlock {
+  float: right;
+}
+
+.loginBlock a {
+  color: #fff;
+}

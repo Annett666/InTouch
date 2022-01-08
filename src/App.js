@@ -2,22 +2,22 @@ import { Route } from "react-router";
 
 import "./App.css";
 import News from "./components/News/News";
-import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import UsersContainer from "./components/Users/UsersContainer";
 import DialogsContainer from "./components/Dialods/DialogsContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 // стрелочная функция
 const App = (props) => {
   return (
     <div className="app-wrapper">
-      <Header />
+      <HeaderContainer />
       <Navbar />
       <div className="app-wrapper-content">
-        <Route path="/profile" render={() => <Profile />} />
+        <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
         <Route path="/dialogs" render={() => <DialogsContainer />} />
         <Route path="/news" render={() => <News />} />
         <Route path="/music" render={() => <Music />} />
